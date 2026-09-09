@@ -104,24 +104,14 @@ export default function WiapyUpsellCTA() {
   return (
     <section 
       id="secao-cta-upsell" 
-      className="w-full text-center py-8 px-4 sm:px-6 mb-6 rounded-2xl bg-gradient-to-b from-white via-rose-50/40 to-white border-2 border-rose-200/90 shadow-[0_8px_30px_rgb(244,114,182,0.18)] relative overflow-hidden"
+      className="w-full text-center py-7 px-4 sm:px-6 mb-6 rounded-2xl bg-gradient-to-b from-white via-rose-50/40 to-white border-2 border-rose-200/90 shadow-[0_8px_30px_rgb(244,114,182,0.18)] relative overflow-hidden"
     >
       <div className="max-w-md mx-auto">
-        <div className="inline-flex items-center gap-1 text-xs font-extrabold text-rose-700 uppercase tracking-wider mb-3">
-          <Sparkles className="w-3.5 h-3.5 text-rose-500 animate-pulse" />
-          <span>Clique abaixo para adicionar ao seu pedido</span>
-        </div>
-
         {/* Container ÚNICO oficial da Wiapy mantido limpo para manipulação do script */}
         <div 
           id="wiapy_upsell" 
           className="w-full min-h-[90px] flex flex-col items-center justify-center"
         />
-
-        {/* Indicador estrutural discreto para desenvolvedores */}
-        <div className="mt-4 text-[11px] text-gray-400 font-mono">
-          Checkout Wiapy: {WIAPY_CHECKOUT_URL}
-        </div>
       </div>
     </section>
   );

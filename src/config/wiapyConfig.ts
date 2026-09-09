@@ -14,4 +14,4 @@ export const WIAPY_CHECKOUT_URL = "https://pay.wiapy.com/GPbyMpd98IOx";
 
 export const WIAPY_REFUSAL_URL = "https://wiapy.com/login";
 
-export const UPSELL_PRICE_PLACEHOLDER = "[PREÇO DO UPSELL]";
+export const UPSELL_PRICE = "R$ 12,90";

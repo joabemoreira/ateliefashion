@@ -1,11 +1,18 @@
-import { Sparkles, Crown } from 'lucide-react';
-import { UPSELL_PRICE_PLACEHOLDER } from '../config/wiapyConfig.ts';
+import { Sparkles } from 'lucide-react';
+import { UPSELL_PRICE } from '../config/wiapyConfig.ts';
 
 /**
- * SEÇÃO 5 — OFERTA ESPECIAL
+ * SEÇÃO 8 & 9 — TRANSIÇÃO & BLOCO DA OFERTA
  * 
- * Resumo da oferta com o placeholder do preço facilmente identificável
- * com apresentação boutique e detalhes champagne/ouro suave.
+ * Frase de transição:
+ * "Você já tem as bonequinhas. Agora pode criar ainda mais looks para elas."
+ * "Oferta especial para quem acabou de comprar"
+ * 
+ * Bloco da oferta:
+ * - Título: "ATELIÊ FASHION"
+ * - Resumo: "50 roupas + 50 cabelos + 50 sapatos + 50 bolsas + 50 acessórios"
+ * - "ATUALIZAÇÕES MENSAIS INCLUÍDAS"
+ * - Preço: "Por apenas R$ 12,90"
  */
 export default function SpecialOfferSection() {
   return (
@@ -13,54 +20,55 @@ export default function SpecialOfferSection() {
       id="secao-oferta-especial" 
       className="w-full text-center py-8 px-4 sm:px-6 mb-6 rounded-2xl bg-white border border-rose-100 shadow-[0_4px_24px_-4px_rgba(244,114,182,0.12)] relative"
     >
-      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold tracking-wider uppercase mb-2">
-        <Crown className="w-3.5 h-3.5 text-amber-600" />
-        <span>Condição Exclusiva</span>
+      {/* 7. Frase de transição para a oferta */}
+      <div className="mb-6 max-w-md mx-auto">
+        <p className="text-base sm:text-lg font-bold text-gray-900 leading-snug mb-1">
+          Você já tem as bonequinhas.
+        </p>
+        <p className="text-sm sm:text-base font-semibold text-rose-600 mb-3">
+          Agora pode criar ainda mais looks para elas.
+        </p>
+        <div className="inline-block px-3.5 py-1 rounded-full bg-rose-50 border border-rose-200 text-rose-800 text-xs font-bold tracking-wide">
+          Oferta especial para quem acabou de comprar.
+        </div>
       </div>
 
-      <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-1.5 tracking-tight">
-        Oferta especial para você
-      </h2>
-
-      <p className="text-sm sm:text-base text-rose-600 font-semibold mb-6">
-        Disponível somente nesta etapa após a compra.
-      </p>
-
-      {/* Card boutique do produto com borda champagne/rosé e textura suave */}
+      {/* 9. Bloco visual forte da oferta */}
       <div 
-        id="card-resumo-oferta"
-        className="p-6 rounded-2xl bg-gradient-to-b from-rose-50/70 via-pink-50/40 to-amber-50/50 border-2 border-rose-200/90 shadow-sm max-w-lg mx-auto relative overflow-hidden"
+        id="card-bloco-oferta"
+        className="p-6 sm:p-7 rounded-2xl bg-gradient-to-b from-rose-50/80 via-pink-50/40 to-amber-50/40 border-2 border-rose-200/90 shadow-sm max-w-lg mx-auto relative overflow-hidden"
       >
-        <div className="inline-block px-4 py-1 rounded-full bg-rose-500 text-white text-xs font-black uppercase tracking-widest mb-3 shadow-2xs">
-          Edição Limitada
-        </div>
-
         <h3 className="text-2xl sm:text-3xl font-black text-gray-900 mb-3 tracking-tight flex items-center justify-center gap-2">
           <span>ATELIÊ FASHION</span>
           <Sparkles className="w-5 h-5 text-amber-500" />
         </h3>
 
-        {/* Resumo do conteúdo */}
-        <div className="p-3.5 bg-white/90 rounded-xl border border-rose-200/70 mb-5 shadow-2xs">
-          <p className="text-xs sm:text-sm text-gray-700 font-semibold leading-relaxed">
-            50 roupas + 50 cabelos + 50 sapatos + 50 bolsas + 50 acessórios + atualizações mensais
+        {/* Resumo do conteúdo oficial */}
+        <div className="p-3.5 bg-white/95 rounded-xl border border-rose-200/80 mb-4 shadow-2xs">
+          <p className="text-xs sm:text-sm text-gray-800 font-bold leading-relaxed">
+            50 roupas + 50 cabelos + 50 sapatos + 50 bolsas + 50 acessórios
           </p>
         </div>
 
-        {/* Placeholder do preço do Upsell em destaque com moldura champagne */}
-        <div 
-          id="preco-upsell-placeholder" 
-          className="py-3 px-6 bg-gradient-to-r from-amber-50 to-rose-50 border-2 border-dashed border-amber-300 rounded-xl inline-flex flex-col items-center justify-center my-1 shadow-2xs"
-        >
-          <span className="text-xs font-bold text-amber-800 uppercase tracking-wider mb-0.5">
-            Valor Promocional do Upsell
+        {/* Destaque das atualizações mensais */}
+        <div className="mb-5">
+          <span className="inline-block px-3 py-1 rounded-full bg-purple-100 text-purple-800 text-[11px] sm:text-xs font-extrabold uppercase tracking-wider border border-purple-200">
+            ATUALIZAÇÕES MENSAIS INCLUÍDAS
           </span>
-          <span className="text-xl sm:text-2xl font-black text-gray-900 font-mono tracking-tight">
-            {UPSELL_PRICE_PLACEHOLDER}
+        </div>
+
+        {/* Preço real do Upsell */}
+        <div 
+          id="preco-upsell-container" 
+          className="py-3.5 px-6 bg-white border border-rose-200 rounded-xl inline-flex flex-col items-center justify-center shadow-2xs w-full max-w-xs mx-auto"
+        >
+          <span className="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight">
+            Por apenas {UPSELL_PRICE}
           </span>
         </div>
       </div>
     </section>
   );
 }
+
 

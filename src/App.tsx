@@ -1,7 +1,8 @@
 import ConfirmationSection from './components/ConfirmationSection.tsx';
-import ProductPresentationSection from './components/ProductPresentationSection.tsx';
-import FeaturesSection from './components/FeaturesSection.tsx';
 import MainBenefitSection from './components/MainBenefitSection.tsx';
+import MechanismSection from './components/MechanismSection.tsx';
+import FeaturesSection from './components/FeaturesSection.tsx';
+import UpdatesSection from './components/UpdatesSection.tsx';
 import SpecialOfferSection from './components/SpecialOfferSection.tsx';
 import WiapyUpsellCTA from './components/WiapyUpsellCTA.tsx';
 import GuaranteeSection from './components/GuaranteeSection.tsx';
@@ -9,9 +10,22 @@ import GuaranteeSection from './components/GuaranteeSection.tsx';
 /**
  * PÁGINA EXTERNA DE UPSELL: ATELIÊ FASHION
  * 
- * Conceito: Fashion + Papel + Criatividade + Encanto.
- * Extensão premium da oferta principal "+350 Bonecas de Papel".
- * Segue estritamente a hierarquia, seções, copy e integração do Upsell da Wiapy.
+ * Ordem lógica estrita:
+ * CONFIRMAÇÃO & OFERTA (Primeira Dobra)
+ * ↓
+ * POR QUE VOCÊ VAI AMAR
+ * ↓
+ * DEMONSTRAÇÃO DO MECANISMO
+ * ↓
+ * CONTEÚDO (5 cards com fotos)
+ * ↓
+ * ATUALIZAÇÕES MENSAIS
+ * ↓
+ * TRANSIÇÃO & OFERTA/PREÇO
+ * ↓
+ * CTA PRINCIPAL (Wiapy)
+ * ↓
+ * GARANTIA E SEGURANÇA
  */
 export default function App() {
   return (
@@ -25,31 +39,35 @@ export default function App() {
         </p>
       </header>
 
-      {/* Conteúdo principal formatado mobile-first */}
-      <main className="w-full max-w-xl mx-auto px-3.5 sm:px-5 py-5 sm:py-8 flex flex-col">
-        {/* SEÇÃO 1 — CONFIRMAÇÃO DA COMPRA */}
+      {/* Conteúdo principal formatado mobile-first e responsivo no desktop */}
+      <main className="w-full max-w-2xl mx-auto px-3.5 sm:px-5 py-5 sm:py-8 flex flex-col">
+        {/* 1. CONFIRMAÇÃO & PRIMEIRA DOBRA DA OFERTA */}
         <ConfirmationSection />
 
-        {/* SEÇÃO 2 — APRESENTAÇÃO DO UPSELL */}
-        <ProductPresentationSection />
-
-        {/* SEÇÃO 3 — O QUE VEM NO ATELIÊ FASHION */}
-        <FeaturesSection />
-
-        {/* SEÇÃO 4 — BENEFÍCIO PRINCIPAL & MECANISMO */}
+        {/* 2. POR QUE VOCÊ VAI AMAR */}
         <MainBenefitSection />
 
-        {/* SEÇÃO 5 — OFERTA ESPECIAL */}
+        {/* 3. DEMONSTRAÇÃO DO MECANISMO */}
+        <MechanismSection />
+
+        {/* 4. CONTEÚDO (5 CARDS) */}
+        <FeaturesSection />
+
+        {/* 5. ATUALIZAÇÕES MENSAIS */}
+        <UpdatesSection />
+
+        {/* 6. TRANSIÇÃO & BLOCO DA OFERTA */}
         <SpecialOfferSection />
 
-        {/* SEÇÃO 6 & 7 — CTA PRINCIPAL & MECANISMO DE RECUSA DA WIAPY */}
+        {/* 7. CTA PRINCIPAL & MECANISMO DE RECUSA DA WIAPY */}
         <WiapyUpsellCTA />
 
-        {/* SEÇÃO 8 — GARANTIA / SEGURANÇA */}
+        {/* 8. GARANTIA & SEGURANÇA */}
         <GuaranteeSection />
       </main>
     </div>
   );
 }
+
 
 
