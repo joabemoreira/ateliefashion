@@ -12,6 +12,6 @@
  */
 export const WIAPY_CHECKOUT_URL = "https://pay.wiapy.com/GPbyMpd98IOx";
 
-export const WIAPY_REFUSAL_URL = "https://wiapy.com/login";
+export const WIAPY_REFUSAL_URL = "https://drive.google.com/drive/folders/1t59ysHvPN_5zuP9U30ObqjKCL53nGMfK?usp=sharing";
 
 export const UPSELL_PRICE = "R$ 12,90";
